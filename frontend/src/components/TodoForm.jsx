@@ -1,16 +1,16 @@
-import {state} from '../state';
+import {useState} from '../state';
 
 function TodoForm() {
-    const [task, setTask] = state.useState('');
+    const [task, setTask] = useState('');
 
-    const handleSumbit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         console.log(task);
          setTask('');
     };
 
     return (
-        <form onSubmit={handleSumbit}>
+        <form onSubmit={handleSubmit}>
             <input
                 type="text"
                 placeholder="Enter a task"
